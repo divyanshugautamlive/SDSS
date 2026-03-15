@@ -148,8 +148,9 @@ img{max-width:100%;display:block}
 .page-hero p{font-size:1.1rem;max-width:700px;margin:0 auto;opacity:.9}
 
 /* === NEW SERVICE CARDS (IMAGE + ICON) === */
+.services-grid-v2{display:grid;grid-template-columns:repeat(2,1fr);gap:40px}
 .service-card-v2{background:var(--white);border-radius:15px;overflow:hidden;box-shadow:0 5px 30px rgba(0,0,0,.06);transition:all .4s ease;display:flex;flex-direction:column;height:100%}
-.service-card-v2:hover{transform:translateY(-10px);box-shadow:0 15px 40px rgba(245,166,35,.15)}
+.service-card-v2:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 15px 40px rgba(245,166,35,.25);z-index:10;position:relative}
 .img-placeholder{width:100%;height:220px;background:#e0e0e0;border:2px dashed #ccc;display:flex;align-items:center;justify-content:center;color:#666;font-size:.9rem;position:relative}
 .service-icon-box{position:absolute;bottom:-25px;left:25px;width:60px;height:60px;background:var(--gold);color:var(--navy);font-size:1.8rem;display:flex;align-items:center;justify-content:center;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,.2)}
 .service-content-v2{padding:45px 25px 30px;flex-grow:1;display:flex;flex-direction:column}
@@ -232,7 +233,7 @@ img{max-width:100%;display:block}
   .hero h1{font-size:2rem}
   .hero h2{font-size:1.1rem}
   .about .container{grid-template-columns:1fr}
-  .services-grid,.why-grid,.steps{grid-template-columns:1fr}
+  .services-grid,.services-grid-v2,.why-grid,.steps{grid-template-columns:1fr}
   .sectors-grid{grid-template-columns:repeat(2,1fr)}
   .contact-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
