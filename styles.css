@@ -181,8 +181,8 @@ img{max-width:100%;display:block}
 .logo-strip{padding:50px 20px;background:var(--light);overflow:hidden}
 .logo-strip-title{text-align:center;font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:30px}
 .marquee-container{display:flex;gap:40px;animation:scroll 20s linear infinite;width:max-content}
-.client-logo{width:180px;height:80px;background:var(--white);border:2px dashed #ccc;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#888;font-weight:600;box-shadow:0 4px 15px rgba(0,0,0,.03)}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(calc(-180px * 4 - 40px * 4))}}
+.client-logo{width:280px;height:180px;background:transparent;border-radius:8px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(0,0,0,.15); overflow:hidden;}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(calc(-280px * 6 - 40px * 6))}}
 
 /* === HOW WE HIRE (TIMELINE) === */
 .hire-timeline{display:flex;justify-content:space-between;position:relative;max-width:1000px;margin:60px auto 0}
