@@ -142,6 +142,82 @@ img{max-width:100%;display:block}
 .float-btn:hover .tooltip{opacity:1}
 @keyframes pulse-wa{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.4)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}}
 
+/* === PAGE HERO === */
+.page-hero{background:linear-gradient(135deg,rgba(13,27,42,.92),rgba(26,46,68,.88)),url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1920&q=80') center/cover no-repeat;padding:150px 20px 80px;text-align:center;color:var(--light)}
+.page-hero h1{font-size:2.8rem;font-weight:800;color:var(--gold);margin-bottom:15px}
+.page-hero p{font-size:1.1rem;max-width:700px;margin:0 auto;opacity:.9}
+
+/* === NEW SERVICE CARDS (IMAGE + ICON) === */
+.service-card-v2{background:var(--white);border-radius:15px;overflow:hidden;box-shadow:0 5px 30px rgba(0,0,0,.06);transition:all .4s ease;display:flex;flex-direction:column;height:100%}
+.service-card-v2:hover{transform:translateY(-10px);box-shadow:0 15px 40px rgba(245,166,35,.15)}
+.img-placeholder{width:100%;height:220px;background:#e0e0e0;border:2px dashed #ccc;display:flex;align-items:center;justify-content:center;color:#666;font-size:.9rem;position:relative}
+.service-icon-box{position:absolute;bottom:-25px;left:25px;width:60px;height:60px;background:var(--gold);color:var(--navy);font-size:1.8rem;display:flex;align-items:center;justify-content:center;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,.2)}
+.service-content-v2{padding:45px 25px 30px;flex-grow:1;display:flex;flex-direction:column}
+.service-content-v2 h3{font-size:1.25rem;font-weight:700;color:var(--navy);margin-bottom:12px}
+.service-content-v2 p{color:#666;line-height:1.7;font-size:.92rem;margin-bottom:20px;flex-grow:1}
+.read-more{color:var(--navy);font-weight:700;font-size:.95rem;display:inline-flex;align-items:center;gap:5px;transition:color .3s}
+.read-more i{transition:transform .3s;font-size:.85rem}
+.read-more:hover{color:var(--gold)}
+.read-more:hover i{transform:translateX(5px)}
+
+/* === SECTOR BADGES === */
+.sector-badges{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:30px}
+.sector-badge{background:var(--white);border:1px solid #ddd;padding:10px 20px;border-radius:50px;font-size:.95rem;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:8px;box-shadow:0 2px 10px rgba(0,0,0,.03)}
+
+/* === TESTIMONIALS SLIDER === */
+.testimonials{padding:100px 20px;background:var(--mid-navy);color:var(--light);overflow:hidden}
+.slider-container{position:relative;max-width:1000px;margin:0 auto}
+.slider-track{display:flex;transition:transform 0.5s ease;gap:30px}
+.testimonial-card{flex:0 0 calc(33.333% - 20px);background:rgba(255,255,255,.05);padding:30px;border-radius:15px;border:1px solid rgba(255,255,255,.1)}
+.stars{color:var(--gold);font-size:1.1rem;margin-bottom:15px}
+.review-text{font-style:italic;line-height:1.7;font-size:.95rem;margin-bottom:20px;opacity:.9}
+.reviewer-name{font-weight:700;color:var(--gold);font-size:1rem;margin-bottom:2px}
+.reviewer-title{font-size:.8rem;opacity:.7}
+.slider-nav{display:flex;justify-content:center;gap:15px;margin-top:40px}
+.slider-btn{background:transparent;border:2px solid var(--gold);color:var(--gold);width:45px;height:45px;border-radius:50%;cursor:pointer;font-size:1.2rem;transition:all .3s}
+.slider-btn:hover{background:var(--gold);color:var(--navy)}
+
+/* === CLIENT LOGOS MARQUEE === */
+.logo-strip{padding:50px 20px;background:var(--light);overflow:hidden}
+.logo-strip-title{text-align:center;font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:30px}
+.marquee-container{display:flex;gap:40px;animation:scroll 20s linear infinite;width:max-content}
+.client-logo{width:180px;height:80px;background:var(--white);border:2px dashed #ccc;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#888;font-weight:600;box-shadow:0 4px 15px rgba(0,0,0,.03)}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(calc(-180px * 4 - 40px * 4))}}
+
+/* === HOW WE HIRE (TIMELINE) === */
+.hire-timeline{display:flex;justify-content:space-between;position:relative;max-width:1000px;margin:60px auto 0}
+.hire-timeline::before{content:'';position:absolute;top:35px;left:0;width:100%;height:2px;background:#e0e0e0;z-index:1}
+.timeline-step{position:relative;z-index:2;width:22%;text-align:center}
+.timeline-circle{width:70px;height:70px;background:var(--white);border:3px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--navy);font-weight:800;margin:0 auto 20px;position:relative}
+.timeline-step h4{font-size:1.1rem;color:var(--navy);margin-bottom:10px}
+.timeline-step p{font-size:.85rem;color:#666;line-height:1.6}
+
+/* === ABOUT MISC === */
+.founder-card{background:var(--white);border-radius:15px;padding:30px;box-shadow:0 10px 30px rgba(0,0,0,.05);display:flex;gap:30px;align-items:center}
+.founder-photo{width:250px;height:250px;flex-shrink:0;border-radius:12px;background:#e0e0e0;border:2px dashed #ccc;display:flex;align-items:center;justify-content:center;color:#666;font-size:.9rem}
+.founder-info h3{font-size:1.8rem;color:var(--navy);margin-bottom:5px}
+.founder-info h4{font-size:1rem;color:var(--gold);margin-bottom:20px}
+.founder-info p{color:#555;line-height:1.7}
+.mission-vision{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px}
+.mv-box{background:var(--navy);color:var(--light);padding:40px;border-radius:15px;border-bottom:5px solid var(--gold)}
+.mv-box h3{color:var(--gold);font-size:1.5rem;margin-bottom:15px}
+.mv-box p{line-height:1.8;opacity:.9}
+
+/* === RESPONSIVE UPDATES FOR NEW DEVS === */
+@media(max-width:1024px){
+  .hire-timeline{flex-direction:column;gap:40px}
+  .hire-timeline::before{top:0;left:35px;width:2px;height:100%}
+  .timeline-step{width:100%;display:flex;text-align:left;gap:20px;align-items:flex-start}
+  .timeline-circle{margin:0}
+  .testimonial-card{flex:0 0 calc(50% - 15px)}
+  .founder-card{flex-direction:column;text-align:center}
+  .founder-photo{width:100%;max-width:300px}
+}
+@media(max-width:768px){
+  .mission-vision{grid-template-columns:1fr}
+  .testimonial-card{flex:0 0 100%}
+}
+
 /* === RESPONSIVE === */
 @media(max-width:1024px){
   .services-grid,.why-grid{grid-template-columns:repeat(2,1fr)}
