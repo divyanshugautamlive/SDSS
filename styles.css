@@ -158,7 +158,7 @@ img{max-width:100%;display:block}
 .services-grid-v2{display:grid;grid-template-columns:repeat(2,1fr);gap:40px}
 .service-card-v2{background:var(--white);border-radius:15px;overflow:hidden;box-shadow:0 5px 30px rgba(0,0,0,.06);transition:all .4s ease;display:flex;flex-direction:column;height:100%}
 .service-card-v2:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 15px 40px rgba(245,166,35,.25);z-index:10;position:relative}
-.img-placeholder{width:100%;height:220px;background:#e0e0e0;border:2px dashed #ccc;display:flex;align-items:center;justify-content:center;color:#666;font-size:.9rem;position:relative}
+.img-placeholder{width:100%;height:250px;background:#e0e0e0;border:2px dashed #ccc;display:flex;align-items:center;justify-content:center;color:#666;font-size:.9rem;position:relative}
 .service-icon-box{position:absolute;bottom:-25px;left:25px;width:60px;height:60px;background:var(--gold);color:var(--navy);font-size:1.8rem;display:flex;align-items:center;justify-content:center;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,.2)}
 .service-content-v2{padding:45px 25px 30px;flex-grow:1;display:flex;flex-direction:column}
 .service-content-v2 h3{font-size:1.25rem;font-weight:700;color:var(--navy);margin-bottom:12px}
@@ -189,7 +189,7 @@ img{max-width:100%;display:block}
 .logo-strip{padding:50px 20px;background:var(--light);overflow:hidden}
 .logo-strip-title{text-align:center;font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:30px}
 .marquee-container{display:flex;gap:40px;animation:scroll 20s linear infinite;width:max-content}
-.client-logo{width:280px;height:180px;background:transparent;border-radius:8px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(0,0,0,.15); overflow:hidden;}
+.client-logo{width:235px;height:180px;background:transparent;border-radius:8px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(0,0,0,.15); overflow:hidden;}
 @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(calc(-280px * 6 - 40px * 6))}}
 
 /* === HOW WE HIRE (TIMELINE) === */
@@ -211,7 +211,7 @@ img{max-width:100%;display:block}
 .founder-info h4{font-size:1rem;color:var(--gold);margin-bottom:20px}
 .founder-info p{color:#555;line-height:1.7}
 .mission-vision{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px}
-.mv-box{background:var(--navy);color:var(--light);padding:40px;border-radius:15px;border-bottom:5px solid var(--gold);transition:all 0.4s ease;cursor:default;position:relative;overflow:hidden}
+.mv-box{background:var(--navy);color:var(--light);padding:30px;border-radius:15px;border-bottom:5px solid var(--gold);transition:all 0.4s ease;cursor:default;position:relative;overflow:hidden}
 .mv-box::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(45deg,rgba(245,166,35,0.1),transparent);opacity:0;transition:opacity 0.4s}
 .mv-box:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 15px 35px rgba(13,27,42,0.4)}
 .mv-box:hover::after{opacity:1}
@@ -259,6 +259,8 @@ img{max-width:100%;display:block}
   .cta-banner h2{font-size:1.5rem}
 }
 @media(max-width:480px){
+  
+  .timeline-circle{width: 55px;height: 29px;font-size: 1rem;}
   .sectors-grid{grid-template-columns:repeat(2,1fr)}
   .hero h1{font-size:1.6rem}
   .hero-btns{flex-direction:column;align-items:center}
