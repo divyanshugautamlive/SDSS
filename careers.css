@@ -1,0 +1,938 @@
+/* ===================================================
+   CAREERS PAGE — SDSS Join Our Team
+   =================================================== */
+
+/* === LANGUAGE TOGGLE === */
+.lang-toggle {
+  position: fixed;
+  top: 85px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  gap: 0;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .15);
+  border: 2px solid var(--gold)
+}
+
+.lang-btn {
+  background: var(--white);
+  border: none;
+  padding: 8px 16px;
+  font-family: 'Poppins', sans-serif;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--navy);
+  cursor: pointer;
+  transition: all .3s
+}
+
+.lang-btn.active {
+  background: var(--gold);
+  color: var(--navy)
+}
+
+.lang-btn:hover:not(.active) {
+  background: #f0f0f0
+}
+
+/* === CAREERS HERO === */
+.careers-hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(135deg, rgba(13, 27, 42, .92), rgba(26, 46, 68, .85)),
+    url('assets/images/photo_15_2026-03-15_15-29-57.jpg') center/cover no-repeat;
+  color: var(--light);
+  padding: 140px 20px 80px;
+  overflow: hidden
+}
+
+.careers-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 20% 50%, rgba(245, 166, 35, .08) 0%, transparent 60%);
+  pointer-events: none
+}
+
+.careers-hero-content {
+  position: relative;
+  z-index: 2
+}
+
+.careers-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(245, 166, 35, .12);
+  border: 1px solid rgba(245, 166, 35, .4);
+  color: var(--gold);
+  padding: 10px 28px;
+  border-radius: 50px;
+  font-size: .9rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  animation: badge-glow 3s ease-in-out infinite
+}
+
+@keyframes badge-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 166, 35, .2) }
+  50% { box-shadow: 0 0 20px 5px rgba(245, 166, 35, .15) }
+}
+
+.careers-hero h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.15;
+  background: linear-gradient(135deg, #ffffff 0%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text
+}
+
+.careers-hero-sub {
+  font-size: 1.15rem;
+  max-width: 550px;
+  margin: 0 auto 30px;
+  opacity: .9;
+  line-height: 1.7
+}
+
+.careers-hero-perks {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 35px
+}
+
+.perk-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .15);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--light);
+  backdrop-filter: blur(10px);
+  transition: all .3s
+}
+
+.perk-pill:hover {
+  background: rgba(245, 166, 35, .15);
+  border-color: var(--gold);
+  transform: translateY(-2px)
+}
+
+.perk-pill i {
+  color: var(--gold);
+  font-size: 1rem
+}
+
+.btn-apply-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: 2px solid var(--gold);
+  transition: all .3s;
+  animation: pulse-gold 2s infinite;
+  cursor: pointer
+}
+
+.btn-apply-hero:hover {
+  background: transparent;
+  color: var(--gold);
+  animation: none
+}
+
+.btn-apply-hero i {
+  animation: arrow-bounce 1.5s infinite
+}
+
+@keyframes arrow-bounce {
+  0%, 100% { transform: translateY(0) }
+  50% { transform: translateY(5px) }
+}
+
+/* === ROLE SELECTION === */
+.role-selection {
+  padding: 80px 20px;
+  background: var(--white)
+}
+
+.role-subtitle {
+  color: #777;
+  font-size: 1rem;
+  margin-top: 10px
+}
+
+.role-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto
+}
+
+.role-card {
+  position: relative;
+  background: var(--white);
+  border: 2px solid #e8e8e8;
+  border-radius: 18px;
+  padding: 35px 20px 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent
+}
+
+.role-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(245, 166, 35, .12)
+}
+
+.role-card.selected {
+  border-color: var(--gold);
+  background: linear-gradient(135deg, rgba(245, 166, 35, .06), rgba(245, 166, 35, .02));
+  box-shadow: 0 8px 30px rgba(245, 166, 35, .2);
+  transform: translateY(-4px)
+}
+
+.role-card-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--navy), var(--mid-navy));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  transition: all .3s
+}
+
+.role-card-icon i {
+  font-size: 1.8rem;
+  color: var(--gold);
+  transition: transform .3s
+}
+
+.role-card:hover .role-card-icon i,
+.role-card.selected .role-card-icon i {
+  transform: scale(1.15)
+}
+
+.role-card.selected .role-card-icon {
+  background: var(--gold);
+  box-shadow: 0 5px 20px rgba(245, 166, 35, .4)
+}
+
+.role-card.selected .role-card-icon i {
+  color: var(--navy)
+}
+
+.role-card-check {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  opacity: 0;
+  transform: scale(0);
+  transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+}
+
+.role-card.selected .role-card-check {
+  opacity: 1;
+  transform: scale(1)
+}
+
+.role-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 5px;
+  transition: color .3s
+}
+
+.role-card.selected h3 {
+  color: var(--gold)
+}
+
+.role-card p {
+  font-size: .78rem;
+  color: #999;
+  font-weight: 500
+}
+
+/* === APPLICATION FORM === */
+.application-form-section {
+  padding: 60px 20px 100px;
+  background: var(--light)
+}
+
+.app-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px 35px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, .06);
+  border: 1px solid #eee
+}
+
+/* Selected Role Display */
+.selected-role-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, rgba(13, 27, 42, .04), rgba(245, 166, 35, .06));
+  border: 1px solid rgba(245, 166, 35, .2);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 28px;
+  font-size: .95rem;
+  color: var(--navy)
+}
+
+.selected-role-display i {
+  color: var(--gold);
+  font-size: 1.1rem
+}
+
+.selected-role-display strong {
+  color: var(--gold);
+  flex: 1
+}
+
+.change-role-btn {
+  background: transparent;
+  border: 1px solid var(--navy);
+  border-radius: 50px;
+  padding: 4px 14px;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--navy);
+  cursor: pointer;
+  transition: all .3s;
+  font-family: 'Poppins', sans-serif
+}
+
+.change-role-btn:hover {
+  background: var(--navy);
+  color: var(--white)
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 22px
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: .9rem;
+  color: var(--navy);
+  margin-bottom: 8px
+}
+
+.form-group label i {
+  color: var(--gold);
+  font-size: .95rem;
+  width: 20px;
+  text-align: center
+}
+
+.required-star {
+  color: #e74c3c;
+  font-weight: 700;
+  margin-left: 2px
+}
+
+.optional-tag {
+  font-size: .72rem;
+  font-weight: 500;
+  color: #aaa;
+  background: #f5f5f5;
+  padding: 2px 10px;
+  border-radius: 50px;
+  margin-left: auto
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"] {
+  width: 100%;
+  padding: 15px 18px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  transition: all .3s;
+  background: var(--white)
+}
+
+.form-group input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 4px rgba(245, 166, 35, .1)
+}
+
+.form-group input.error {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 4px rgba(231, 76, 60, .1)
+}
+
+.form-group input.valid {
+  border-color: #27ae60;
+  box-shadow: 0 0 0 4px rgba(39, 174, 96, .1)
+}
+
+/* Phone Input */
+.phone-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center
+}
+
+.phone-prefix {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  font-weight: 600;
+  color: var(--navy);
+  font-size: .95rem;
+  background: #f5f5f5;
+  border-radius: 12px 0 0 12px;
+  border: 2px solid #e0e0e0;
+  border-right: none;
+  pointer-events: none
+}
+
+.phone-input-wrapper input {
+  padding-left: 65px !important;
+  letter-spacing: 1px
+}
+
+.phone-input-wrapper input:focus ~ .phone-prefix,
+.phone-input-wrapper input.error ~ .phone-prefix {
+  border-color: inherit
+}
+
+/* Field Errors */
+.field-error {
+  font-size: .8rem;
+  color: #e74c3c;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 20px
+}
+
+/* Upload Area */
+.upload-area {
+  border: 2px dashed #d0d0d0;
+  border-radius: 14px;
+  padding: 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: all .3s;
+  background: #fafafa
+}
+
+.upload-area:hover {
+  border-color: var(--gold);
+  background: rgba(245, 166, 35, .03)
+}
+
+.upload-area.drag-over {
+  border-color: var(--gold);
+  background: rgba(245, 166, 35, .06);
+  transform: scale(1.02)
+}
+
+.upload-placeholder i {
+  font-size: 2.5rem;
+  color: var(--gold);
+  margin-bottom: 10px;
+  display: block
+}
+
+.upload-placeholder p {
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 5px;
+  font-size: .95rem
+}
+
+.upload-placeholder span {
+  font-size: .78rem;
+  color: #aaa
+}
+
+.upload-preview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  padding: 10px
+}
+
+.upload-preview i {
+  color: #27ae60;
+  font-size: 1.5rem
+}
+
+.upload-preview span {
+  font-weight: 600;
+  color: var(--navy);
+  font-size: .9rem
+}
+
+.remove-file-btn {
+  background: #fee;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #e74c3c;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s;
+  font-size: .9rem
+}
+
+.remove-file-btn:hover {
+  background: #e74c3c;
+  color: #fff
+}
+
+/* Submit Button */
+.btn-submit-app {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, var(--gold), #e0941e);
+  color: var(--navy);
+  border: none;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: all .3s;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden
+}
+
+.btn-submit-app::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent, rgba(255, 255, 255, .2), transparent);
+  transform: translateX(-100%);
+  transition: transform .6s
+}
+
+.btn-submit-app:hover::after {
+  transform: translateX(100%)
+}
+
+.btn-submit-app:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(245, 166, 35, .4)
+}
+
+.btn-submit-app:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important
+}
+
+.btn-submit-app:disabled::after {
+  display: none
+}
+
+.btn-loader {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px
+}
+
+.form-note {
+  text-align: center;
+  font-size: .82rem;
+  color: #999;
+  margin-top: 18px
+}
+
+/* === CONFIRMATION SCREEN === */
+.confirmation-screen {
+  min-height: 100vh;
+  padding: 120px 20px 80px;
+  background: linear-gradient(135deg, #f8f9fa, #eef1f5);
+  display: flex;
+  align-items: center
+}
+
+.confirm-card {
+  max-width: 550px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 24px;
+  padding: 50px 40px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .08);
+  border: 1px solid #eee
+}
+
+.confirm-icon {
+  margin-bottom: 25px
+}
+
+.check-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  animation: check-pop .6s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+}
+
+.check-circle i {
+  font-size: 2.2rem;
+  color: #fff
+}
+
+@keyframes check-pop {
+  0% { transform: scale(0); opacity: 0 }
+  50% { transform: scale(1.2) }
+  100% { transform: scale(1); opacity: 1 }
+}
+
+.confirm-card h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 8px
+}
+
+.confirm-sub {
+  color: #777;
+  font-size: 1rem;
+  margin-bottom: 25px
+}
+
+.confirm-details {
+  background: #f8f9fa;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: left
+}
+
+.confirm-detail-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: .9rem
+}
+
+.confirm-detail-row:last-child {
+  border-bottom: none
+}
+
+.confirm-detail-row i {
+  color: var(--gold);
+  width: 20px;
+  text-align: center;
+  font-size: .9rem
+}
+
+.confirm-detail-row strong {
+  color: var(--navy);
+  margin-right: 5px
+}
+
+.confirm-detail-row span {
+  color: #555
+}
+
+/* Confirm Actions */
+.confirm-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px
+}
+
+.btn-whatsapp-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #25D366;
+  color: #fff;
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  transition: all .3s;
+  animation: pulse-wa 2s infinite
+}
+
+.btn-whatsapp-cta:hover {
+  background: #1da851;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, .3);
+  animation: none
+}
+
+.btn-whatsapp-cta i {
+  font-size: 1.3rem
+}
+
+.btn-call-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--navy);
+  color: var(--light);
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all .3s
+}
+
+.btn-call-cta:hover {
+  background: var(--mid-navy);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(13, 27, 42, .3)
+}
+
+.btn-another {
+  background: transparent;
+  border: 2px solid #ddd;
+  color: #777;
+  padding: 12px;
+  border-radius: 14px;
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif
+}
+
+.btn-another:hover {
+  border-color: var(--gold);
+  color: var(--navy)
+}
+
+/* === STICKY APPLY BAR (Mobile) === */
+.sticky-apply-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 998;
+  padding: 12px 20px;
+  background: var(--white);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, .1);
+  transform: translateY(100%);
+  transition: transform .4s
+}
+
+.sticky-apply-bar.visible {
+  transform: translateY(0)
+}
+
+.sticky-apply-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  width: 100%;
+  transition: all .3s
+}
+
+.sticky-apply-btn:hover {
+  background: #e0941e
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .role-cards-grid {
+    grid-template-columns: repeat(2, 1fr)
+  }
+}
+
+@media (max-width: 768px) {
+  .lang-toggle {
+    top: 75px;
+    right: 15px
+  }
+
+  .lang-btn {
+    padding: 6px 12px;
+    font-size: .8rem
+  }
+
+  .careers-hero {
+    min-height: 70vh;
+    padding: 120px 20px 60px
+  }
+
+  .careers-hero h1 {
+    font-size: 2.2rem
+  }
+
+  .careers-hero-sub {
+    font-size: 1rem
+  }
+
+  .perk-pill {
+    font-size: .78rem;
+    padding: 8px 14px
+  }
+
+  .role-selection {
+    padding: 60px 20px
+  }
+
+  .role-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px
+  }
+
+  .role-card {
+    padding: 25px 15px 20px
+  }
+
+  .role-card-icon {
+    width: 55px;
+    height: 55px
+  }
+
+  .role-card-icon i {
+    font-size: 1.4rem
+  }
+
+  .role-card h3 {
+    font-size: .9rem
+  }
+
+  .application-form-section {
+    padding: 40px 15px 120px
+  }
+
+  .app-form {
+    padding: 30px 22px;
+    border-radius: 16px
+  }
+
+  .sticky-apply-bar {
+    display: block
+  }
+
+  .floating-btns {
+    bottom: 80px
+  }
+
+  .confirm-card {
+    padding: 35px 25px
+  }
+
+  .confirm-card h2 {
+    font-size: 1.4rem
+  }
+}
+
+@media (max-width: 480px) {
+  .careers-hero h1 {
+    font-size: 1.8rem
+  }
+
+  .careers-hero-perks {
+    gap: 8px
+  }
+
+  .perk-pill {
+    font-size: .72rem;
+    padding: 6px 12px
+  }
+
+  .role-card {
+    padding: 20px 12px 18px
+  }
+
+  .role-card-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px
+  }
+
+  .role-card-icon i {
+    font-size: 1.2rem
+  }
+
+  .role-card h3 {
+    font-size: .82rem
+  }
+
+  .role-card p {
+    font-size: .68rem
+  }
+
+  .btn-apply-hero {
+    padding: 14px 30px;
+    font-size: 1rem
+  }
+}
