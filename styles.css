@@ -800,7 +800,31 @@ img {
   padding-top: 20px;
   text-align: center;
   font-size: .85rem;
-  opacity: .7
+  opacity: .7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap
+}
+
+.footer-sitemap-link a {
+  color: var(--gold);
+  font-weight: 600;
+  transition: all .3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  opacity: 1
+}
+
+.footer-sitemap-link a:hover {
+  color: var(--white);
+  text-decoration: underline
+}
+
+.footer-sitemap-link i {
+  font-size: .9rem
 }
 
 /* === FLOATING BUTTONS === */
