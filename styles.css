@@ -1514,3 +1514,24 @@ img {
     align-items: center
   }
 }
+
+/* === BUILT BY CREDIT === */
+.built-by-credit {
+  text-align: center;
+  font-size: 0.72rem;
+  color: #888888;
+  padding-top: 15px;
+  margin-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.built-by-credit a {
+  color: #888888;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.built-by-credit a:hover {
+  color: #ffffff;
+}
